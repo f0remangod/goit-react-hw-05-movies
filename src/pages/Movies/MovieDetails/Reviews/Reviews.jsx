@@ -15,7 +15,7 @@ export const Reviews = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [movieId]);
 
   return (
     <>

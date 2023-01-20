@@ -13,7 +13,7 @@ export const SearchForm = ({ onSubmit }) => {
     event.preventDefault();
 
     if (inputValue.trim() === '') {
-      alert('Search query can not bee empty.');
+      alert('Search query can not be empty.');
       return;
     }
     onSubmit(inputValue);

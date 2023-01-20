@@ -15,7 +15,7 @@ export const Cast = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [movieId]);
 
   return (
     <>

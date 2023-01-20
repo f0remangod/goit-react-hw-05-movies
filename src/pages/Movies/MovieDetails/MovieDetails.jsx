@@ -14,7 +14,7 @@ export const MovieDetails = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [movieId]);
 
   let source = '';
   if (!filmInfo.poster_path) {
