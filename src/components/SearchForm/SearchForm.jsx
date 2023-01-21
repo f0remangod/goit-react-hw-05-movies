@@ -5,6 +5,7 @@ import {
   SearchFormButtonLabel,
   SearchFormInput,
 } from './SearchForm.styled';
+import PropTypes from 'prop-types';
 
 export const SearchForm = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
@@ -47,4 +48,8 @@ export const SearchForm = ({ onSubmit }) => {
       />
     </Form>
   );
+};
+
+SearchForm.propTypes = {
+  onSubmit: PropTypes.func,
 };

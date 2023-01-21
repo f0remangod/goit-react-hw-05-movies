@@ -1,11 +1,10 @@
-// import { StyledContainer } from './Container.styled';
-
 import { StyledHeaderContainer } from './HeaderContainer.styled';
-
-// export const Container = ({ children }) => {
-//   return <StyledContainer>{children}</StyledContainer>;
-// };
+import PropTypes from 'prop-types';
 
 export const HeaderContainer = ({ children }) => {
   return <StyledHeaderContainer>{children}</StyledHeaderContainer>;
+};
+
+HeaderContainer.propTypes = {
+  children: PropTypes.node,
 };
