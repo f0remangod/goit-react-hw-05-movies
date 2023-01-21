@@ -19,7 +19,9 @@ export const Cast = () => {
 
   return (
     <>
-      {!isEmpty(filmCast) && (
+      {isEmpty(filmCast) ? (
+        <p>We don't have any informationabout cast for this movie</p>
+      ) : (
         <>
           <ul>
             {filmCast.map(actor => {
