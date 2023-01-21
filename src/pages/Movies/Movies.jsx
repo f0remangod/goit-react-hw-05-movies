@@ -1,3 +1,4 @@
+import { Container } from 'components/Container/Container';
 import { SearchForm } from 'components/SearchForm/SearchForm';
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
@@ -31,23 +32,25 @@ const Movies = () => {
 
   return (
     <>
-      <SearchForm onSubmit={handleFormSubmit}></SearchForm>
-      {searchResults.length > 0 && (
-        <p>
-          Search results for keyword <em>{query}</em>:
-        </p>
-      )}
-      <ul>
-        {searchResults.map(film => {
-          return (
-            <li key={film.id}>
-              <Link to={`${film.id}`} state={{ from: location }}>
-                {film.title}
-              </Link>
-            </li>
-          );
-        })}
-      </ul>
+      <Container>
+        <SearchForm onSubmit={handleFormSubmit}></SearchForm>
+        {searchResults.length > 0 && (
+          <h1>
+            Search results for keyword <em>{query}</em>:
+          </h1>
+        )}
+        <ul>
+          {searchResults.map(film => {
+            return (
+              <li key={film.id}>
+                <Link to={`${film.id}`} state={{ from: location }}>
+                  {film.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </Container>
     </>
   );
 };

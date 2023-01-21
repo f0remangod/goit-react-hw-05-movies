@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useEffect } from 'react';
 import { getTrendingFilms } from 'services/api';
 import { Link, useLocation } from 'react-router-dom';
+import { Container } from 'components/Container/Container';
 
 const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
@@ -17,7 +18,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
+    <Container>
       <h1>Trending Films</h1>
       <ul>
         {trendingFilms.map(film => {
@@ -30,7 +31,7 @@ const Home = () => {
           );
         })}
       </ul>
-    </div>
+    </Container>
   );
 };
 

@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMovieCredits } from 'services/api';
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'lodash';
+import { CastWrapper } from './Cast.styled';
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -11,7 +12,7 @@ const Cast = () => {
 
   useEffect(() => {
     try {
-      getMovieCredits(movieId).then(res => setFilmCast(res.cast.splice(0, 11)));
+      getMovieCredits(movieId).then(res => setFilmCast(res.cast.splice(0, 8)));
     } catch (error) {
       console.log(error);
     }
@@ -23,7 +24,7 @@ const Cast = () => {
         <p>We don't have any informationabout cast for this movie</p>
       ) : (
         <>
-          <ul>
+          <CastWrapper>
             {filmCast.map(actor => {
               let source = '';
               if (!actor.profile_path) {
@@ -33,14 +34,13 @@ const Cast = () => {
                 source = `https://image.tmdb.org/t/p/w500/${actor.profile_path}`;
               return (
                 <li key={actor.id}>
-                  <img src={source} alt={`${actor.name}`} width="30px" />
-                  {actor.name}
-                  <br />
-                  as {actor.character}
+                  <img src={source} alt={`${actor.name}`} />
+                  <p>{actor.name}</p>
+                  <em>{actor.character}</em>
                 </li>
               );
             })}
-          </ul>
+          </CastWrapper>
         </>
       )}
     </>

@@ -1,4 +1,10 @@
 import { useState } from 'react';
+import {
+  Form,
+  SearchFormButton,
+  SearchFormButtonLabel,
+  SearchFormInput,
+} from './SearchForm.styled';
 
 export const SearchForm = ({ onSubmit }) => {
   const [inputValue, setInputValue] = useState('');
@@ -25,10 +31,12 @@ export const SearchForm = ({ onSubmit }) => {
   };
 
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <button type="submit">🔍</button>
+    <Form className="form" onSubmit={handleSubmit}>
+      <SearchFormButton type="submit">
+        <SearchFormButtonLabel>🔍</SearchFormButtonLabel>
+      </SearchFormButton>
 
-      <input
+      <SearchFormInput
         onChange={handleInputChange}
         className="input"
         value={inputValue}
@@ -37,6 +45,6 @@ export const SearchForm = ({ onSubmit }) => {
         autoFocus
         placeholder="Search films in database"
       />
-    </form>
+    </Form>
   );
 };

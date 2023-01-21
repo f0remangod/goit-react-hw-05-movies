@@ -1,24 +1,19 @@
-import { NavLink } from 'react-router-dom';
-import styled from 'styled-components';
+import { HeaderContainer } from 'components/HeaderContainer/HeaderContainer';
+import { MenuContainer, MenuItem, StyledLink } from './Header.styled';
 
 export const Header = () => {
   return (
     <header>
-      <ul>
-        <li>
-          <StyledLink to="">Home</StyledLink>
-        </li>
-        <li>
-          <StyledLink to="movies">Movies</StyledLink>
-        </li>
-      </ul>
+      <HeaderContainer>
+        <MenuContainer>
+          <MenuItem>
+            <StyledLink to="">Home</StyledLink>
+          </MenuItem>
+          <MenuItem>
+            <StyledLink to="movies">Movies</StyledLink>
+          </MenuItem>
+        </MenuContainer>
+      </HeaderContainer>
     </header>
   );
 };
-
-const StyledLink = styled(NavLink)`
-  color: green;
-  &.active {
-    color: #4901da;
-  }
-`;

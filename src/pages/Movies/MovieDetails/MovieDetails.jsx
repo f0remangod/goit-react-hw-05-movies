@@ -1,13 +1,15 @@
-import {
-  Link,
-  NavLink,
-  Outlet,
-  useLocation,
-  useParams,
-} from 'react-router-dom';
+import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { getFilmById } from 'services/api';
 import { useEffect, useRef, useState } from 'react';
 import { isEmpty } from 'lodash';
+import { Container } from 'components/Container/Container';
+import {
+  MovieInfoWrapper,
+  MovieTextWrapper,
+  SubMenuItem,
+  SubMenuList,
+  SubNavLink,
+} from './MovieDetails.styled';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -32,13 +34,13 @@ const MovieDetails = () => {
   } else source = `https://image.tmdb.org/t/p/w500/${filmInfo.poster_path}`;
 
   return (
-    <>
+    <Container>
       <Link to={goBackHref.current}>Go back ←</Link>
       {!isEmpty(filmInfo) && (
         <>
-          <div>
+          <MovieInfoWrapper>
             <img src={source} alt="poster" width="300px" />
-            <div>
+            <MovieTextWrapper>
               <h1>
                 {filmInfo.title} ({filmInfo.release_date.slice(0, 4)})
               </h1>
@@ -47,24 +49,24 @@ const MovieDetails = () => {
               <p>{filmInfo.overview}</p>
               <b>Genres</b>
               <p>{filmInfo.genres.map(genre => genre.name).join(', ')}</p>
-            </div>
-          </div>
+            </MovieTextWrapper>
+          </MovieInfoWrapper>
           <div>
-            <b>Additional information</b>
-            <ul>
-              <li>
-                <NavLink to="cast">Cast</NavLink>
-              </li>
-              <li>
-                <NavLink to="reviews">Reviews</NavLink>
-              </li>
-            </ul>
+            <h2>Additional information</h2>
+            <SubMenuList>
+              <SubMenuItem>
+                <SubNavLink to="cast">Cast</SubNavLink>
+              </SubMenuItem>
+              <SubMenuItem>
+                <SubNavLink to="reviews">Reviews</SubNavLink>
+              </SubMenuItem>
+            </SubMenuList>
 
             <Outlet />
           </div>
         </>
       )}
-    </>
+    </Container>
   );
 };
 
