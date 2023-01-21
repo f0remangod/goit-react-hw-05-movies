@@ -1,12 +1,21 @@
-import { NavLink, Outlet, useParams } from 'react-router-dom';
+import {
+  Link,
+  NavLink,
+  Outlet,
+  useLocation,
+  useParams,
+} from 'react-router-dom';
 import { getFilmById } from 'services/api';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { isEmpty } from 'lodash';
 
 export const MovieDetails = () => {
   const { movieId } = useParams();
 
   const [filmInfo, setFilmInfo] = useState({});
+
+  const location = useLocation();
+  const goBackHref = useRef(location.state?.from || '/');
 
   useEffect(() => {
     try {
@@ -24,6 +33,7 @@ export const MovieDetails = () => {
 
   return (
     <>
+      <Link to={goBackHref.current}>Go back ←</Link>
       {!isEmpty(filmInfo) && (
         <>
           <div>
