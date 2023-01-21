@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
 import { getMovieByQuery } from 'services/api';
 
-export const Movies = () => {
+const Movies = () => {
   const [searchResults, setSearchResults] = useState([]);
 
   const [searchQuery, setSearchQuery] = useSearchParams();
@@ -51,3 +51,5 @@ export const Movies = () => {
     </>
   );
 };
+
+export default Movies;

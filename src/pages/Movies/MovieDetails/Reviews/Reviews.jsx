@@ -4,7 +4,7 @@ import { getMovieReviews } from 'services/api';
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'lodash';
 
-export const Reviews = () => {
+const Reviews = () => {
   const { movieId } = useParams();
 
   const [filmReviews, setFilmReviews] = useState([]);
@@ -36,3 +36,5 @@ export const Reviews = () => {
     </>
   );
 };
+
+export default Reviews;

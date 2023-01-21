@@ -4,7 +4,7 @@ import { getMovieCredits } from 'services/api';
 import { useEffect, useState } from 'react';
 import { isEmpty } from 'lodash';
 
-export const Cast = () => {
+const Cast = () => {
   const { movieId } = useParams();
 
   const [filmCast, setFilmCast] = useState([]);
@@ -46,3 +46,5 @@ export const Cast = () => {
     </>
   );
 };
+
+export default Cast;

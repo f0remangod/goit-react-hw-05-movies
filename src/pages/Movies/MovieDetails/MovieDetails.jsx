@@ -9,7 +9,7 @@ import { getFilmById } from 'services/api';
 import { useEffect, useRef, useState } from 'react';
 import { isEmpty } from 'lodash';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
 
   const [filmInfo, setFilmInfo] = useState({});
@@ -67,3 +67,5 @@ export const MovieDetails = () => {
     </>
   );
 };
+
+export default MovieDetails;

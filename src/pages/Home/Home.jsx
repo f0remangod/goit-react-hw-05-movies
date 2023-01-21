@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 import { getTrendingFilms } from 'services/api';
 import { Link, useLocation } from 'react-router-dom';
 
-export const Home = () => {
+const Home = () => {
   const [trendingFilms, setTrendingFilms] = useState([]);
 
   const location = useLocation();
@@ -33,3 +33,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
