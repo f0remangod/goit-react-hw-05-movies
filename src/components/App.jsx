@@ -20,7 +20,7 @@ export const App = () => {
   return (
     <>
       <Layout>
-        <Suspense fallback={<p>Loading...</p>}>
+        <Suspense>
           <Routes>
             <Route path="/" element={<Home />} />
 
