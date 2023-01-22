@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movies/static/css/main.88c0a6ac.css",
-    "main.js": "/goit-react-hw-05-movies/static/js/main.fd2fbd56.js",
-    "static/js/256.6d4fa71b.chunk.js": "/goit-react-hw-05-movies/static/js/256.6d4fa71b.chunk.js",
-    "static/js/520.c96f71cc.chunk.js": "/goit-react-hw-05-movies/static/js/520.c96f71cc.chunk.js",
+    "main.js": "/goit-react-hw-05-movies/static/js/main.20646e92.js",
+    "static/js/256.2b13a01a.chunk.js": "/goit-react-hw-05-movies/static/js/256.2b13a01a.chunk.js",
+    "static/js/520.7f41ab87.chunk.js": "/goit-react-hw-05-movies/static/js/520.7f41ab87.chunk.js",
     "static/js/490.a6e2aaec.chunk.js": "/goit-react-hw-05-movies/static/js/490.a6e2aaec.chunk.js",
     "static/js/588.ce8a2350.chunk.js": "/goit-react-hw-05-movies/static/js/588.ce8a2350.chunk.js",
     "static/js/763.881733c3.chunk.js": "/goit-react-hw-05-movies/static/js/763.881733c3.chunk.js",
     "index.html": "/goit-react-hw-05-movies/index.html",
     "main.88c0a6ac.css.map": "/goit-react-hw-05-movies/static/css/main.88c0a6ac.css.map",
-    "main.fd2fbd56.js.map": "/goit-react-hw-05-movies/static/js/main.fd2fbd56.js.map",
-    "256.6d4fa71b.chunk.js.map": "/goit-react-hw-05-movies/static/js/256.6d4fa71b.chunk.js.map",
-    "520.c96f71cc.chunk.js.map": "/goit-react-hw-05-movies/static/js/520.c96f71cc.chunk.js.map",
+    "main.20646e92.js.map": "/goit-react-hw-05-movies/static/js/main.20646e92.js.map",
+    "256.2b13a01a.chunk.js.map": "/goit-react-hw-05-movies/static/js/256.2b13a01a.chunk.js.map",
+    "520.7f41ab87.chunk.js.map": "/goit-react-hw-05-movies/static/js/520.7f41ab87.chunk.js.map",
     "490.a6e2aaec.chunk.js.map": "/goit-react-hw-05-movies/static/js/490.a6e2aaec.chunk.js.map",
     "588.ce8a2350.chunk.js.map": "/goit-react-hw-05-movies/static/js/588.ce8a2350.chunk.js.map",
     "763.881733c3.chunk.js.map": "/goit-react-hw-05-movies/static/js/763.881733c3.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.88c0a6ac.css",
-    "static/js/main.fd2fbd56.js"
+    "static/js/main.20646e92.js"
   ]
 }
