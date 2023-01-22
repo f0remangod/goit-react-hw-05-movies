@@ -1,6 +1,6 @@
 import { Link, Outlet, useLocation, useParams } from 'react-router-dom';
 import { getFilmById } from 'services/api';
-import { useEffect, useRef, useState } from 'react';
+import { Suspense, useEffect, useRef, useState } from 'react';
 import { isEmpty } from 'lodash';
 import { Container } from 'components/Container/Container';
 import {
@@ -78,7 +78,9 @@ const MovieDetails = () => {
               </SubMenuItem>
             </SubMenuList>
 
-            <Outlet />
+            <Suspense>
+              <Outlet />
+            </Suspense>
           </div>
         </>
       )}
