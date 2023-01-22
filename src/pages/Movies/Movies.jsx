@@ -34,6 +34,11 @@ const Movies = () => {
     <>
       <Container>
         <SearchForm onSubmit={handleFormSubmit}></SearchForm>
+
+        {searchResults.length === 0 && query !== '' && (
+          <p>The search has not given any results</p>
+        )}
+
         {searchResults.length > 0 && (
           <h1>
             Search results for keyword <em>{query}</em>:

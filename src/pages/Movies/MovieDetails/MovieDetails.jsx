@@ -48,7 +48,11 @@ const MovieDetails = () => {
               <b>Overview</b>
               <p>{filmInfo.overview}</p>
               <b>Genres</b>
-              <p>{filmInfo.genres.map(genre => genre.name).join(', ')}</p>
+              <p>
+                {filmInfo.genres.length > 0
+                  ? filmInfo.genres.map(genre => genre.name).join(', ')
+                  : 'No information about genres'}
+              </p>
             </MovieTextWrapper>
           </MovieInfoWrapper>
           <div>
