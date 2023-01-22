@@ -42,8 +42,20 @@ const MovieDetails = () => {
             <img src={source} alt="poster" width="300px" />
             <MovieTextWrapper>
               <h1>
-                {filmInfo.title} ({filmInfo.release_date.slice(0, 4)})
+                {filmInfo.title}
+
+                {filmInfo.release_date && (
+                  <span
+                    style={{
+                      padding: '0px 10px',
+                      color: '#a01d1d',
+                    }}
+                  >
+                    ({filmInfo.release_date.slice(0, 4)})
+                  </span>
+                )}
               </h1>
+
               <p>User score: {Math.round(filmInfo.vote_average * 10) + '%'}</p>
               <b>Overview</b>
               <p>{filmInfo.overview}</p>

@@ -21,7 +21,7 @@ const Cast = () => {
   return (
     <>
       {isEmpty(filmCast) ? (
-        <p>We don't have any informationabout cast for this movie</p>
+        <p>We don't have any information about cast for this movie</p>
       ) : (
         <>
           <CastWrapper>
